@@ -1,0 +1,5 @@
+method 1: 
+first loop(from 1 to true length) to count how many spaces within the true length of the string, and calculate the new length.
+second loop (from true length to 1), backward. if meet ' ', write '0','2','%' into the end of string with newlength index, if meet char, copy it. update newlength based on the operation
+time O(2N)
+space O(1) 
