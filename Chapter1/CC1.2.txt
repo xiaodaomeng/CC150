@@ -1,0 +1,4 @@
+method 1: pointer *end to iterate to the end of the string, and swap begin pointer and end pointer
+time O(n+n/2)
+space O(1)
+note: --end to point the last char, need skip null char

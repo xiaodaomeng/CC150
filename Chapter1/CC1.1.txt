@@ -1,0 +1,5 @@
+method 1: boolean array [256] for ASCII code, time O(n), space O(1) 
+method 2: flip bit digit by shift bit, int is 32 bit, can represent 24 lower case characters, time O(n),space O(1)
+method 3: two pointers comparison, time O(n^2), space O(1)
+method 4: sort and then compare neighboured elements, time O(nlogn) but need addition data structure
+
