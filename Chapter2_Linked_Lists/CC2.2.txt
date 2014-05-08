@@ -1,0 +1,13 @@
+mehtod 1: iterative
+runner technique, two pointers with distance k, when the runner hit the end, theslower pointer hit the kth element to the last
+time O(n), space O(1)
+
+method 2: recursive
+node *Re(node *head,int k,int &i){//pass by reference
+     if(head==NULL) return NULL;
+     node *nd=Re(head->next,k,i);
+     i = i+1;
+     if(i==k) return head;
+     return nd;
+}
+time O(n), space O(n)
