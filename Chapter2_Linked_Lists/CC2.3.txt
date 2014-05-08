@@ -1,0 +1,3 @@
+Not allow to access the head, so you don't know the previous node of Node n
+copy n->next->val to n->val, and link n->next to n->next->next
+time O(1), space O(1)
