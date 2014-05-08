@@ -1,0 +1,6 @@
+method 1:
+s2 is substring for s1+s1
+s1s1.find(s2)
+//strstr(str1,str2)
+//substr(pos,length)
+time O(2N), N is the length of s1
