@@ -1,0 +1,4 @@
+permutation == anagram
+method 1: <algorithm>::sort and compare, time O(NlogN),space O(1)
+sort: heap sorting time O(Nlog_2^N)
+method 2: similar as CC1.1, check unique char
