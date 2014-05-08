@@ -1,0 +1,7 @@
+method 1: 
+step 1 -- flip by slash diagonal
+step 2 -- flip by vertical center line
+time O(N^2), space O(1)
+method 2: 
+step 1 -- flip by backslash diagonal
+step 2 -- flip by horizontal center line
