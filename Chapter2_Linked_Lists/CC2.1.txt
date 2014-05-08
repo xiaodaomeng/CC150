@@ -1,0 +1,6 @@
+method 1: no buffer
+two pointers to iterate, and compare.
+time O(N^2), space O(1)
+
+method 2: hash table -- unordered_map<char,int>
+time O(n), space O(N)
