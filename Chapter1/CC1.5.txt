@@ -1,0 +1,9 @@
+method 1: loop from 1
+if(str[i]==str[i-1]) count++;
+else{
+    buffer.push(str[i]);
+    buffer.push(count);
+    count=1;
+}
+in the end, compare the length of buffer and orignal string
+time O(N), space O(N)
