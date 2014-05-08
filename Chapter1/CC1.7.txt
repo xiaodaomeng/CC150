@@ -1,0 +1,7 @@
+method 1: two boolean array [M] [N] to tag the row and col 0, before access the value, check the flag.
+time O(N^2),extra space O(M+N)
+method 2: use first row and col as flag tag. 
+step 1: check first row and col if 0 exist, and tag one flag
+step 2: loop inner matrix, and tag first row and col
+step 3: set to 0 based on first col and row status
+time O(N^2), space O(1) 
