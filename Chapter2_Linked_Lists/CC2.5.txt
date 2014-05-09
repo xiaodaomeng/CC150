@@ -1,0 +1,48 @@
+method 1: leetcode add two numbers 
+time O(max(m,n)), space O(1)
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
+        ListNode dummy(0);
+        ListNode *cur=&dummy;
+        int carry=0;
+        while(l1 || l2 || carry!=0){
+            int sum = carry;
+            if(l1){
+                sum += l1->val;
+                l1=l1->next;
+            }
+            if(l2){
+                sum += l2->val;
+                l2=l2->next;
+            }
+            carry = sum/10;
+            ListNode *newnode = new ListNode(sum%10);
+            cur->next=newnode;
+            cur=newnode;
+        }
+        return dummy.next;
+    }
+};
+
+Follow up:
+method 1:
+1: compare two linked lists length, and pad 0 node to the short one and make sure two lists have equal length.
+2: create class
+class helpsum{
+      Node* sum;
+      int carry=0;
+};
+3: recursive call, then create new node before current node to record result digit
+method 2:
+reverse two linked lists, and then add in the backward sequence, then reverse the result list
+
+NOTE: if add two big integers, can use linkedlist to represent digit
