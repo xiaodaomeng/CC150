@@ -1,0 +1,3 @@
+method 1: reverse and compare
+mehotd 2: iterate -- runner technique to push the first half list into stack and pop to compare left half of list
+method 3: recurse -- each recursive call make length-2
