@@ -1,0 +1,41 @@
+method 1: keep two linkedlists to record smaller partition and larger patition, and connect them together
+time O(n), space O(n)
+
+method 2:leetcode partition list,but can access head node 
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode *partition(ListNode *head, int x) {
+        ListNode dummy(0);
+        ListNode *cur = &dummy, *ins = &dummy;
+        dummy.next = head;
+
+        while(cur->next){
+            if(cur->next->val>=x){
+                cur = cur->next;
+            }
+            else{
+                if(cur == ins){
+                    cur = cur->next;
+                    ins = ins->next;//record current small partition end
+                }
+                else{
+                    ListNode *move = cur->next;
+                    cur->next = move->next;
+                    move->next = ins->next;
+                    ins->next = move;
+                    ins = move;
+                }
+            }
+        }
+        return dummy.next;
+    }
+};
+
