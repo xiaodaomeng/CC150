@@ -1,0 +1,7 @@
+method 1: fixed division
+divide array into three equal parts
+buffer array to record the stk value
+stackpointer[3] to record 3 stk top index
+push(),pop(),peek(),isEmpty(),stktoarrayindex()
+
+method 2:flexible divisions, need to look through details?
