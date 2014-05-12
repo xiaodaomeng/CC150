@@ -1,0 +1,8 @@
+method 1: 
+2stk
+1st stk to record the all the inputs
+2nd stk to record the previous smaller values
+
+eg: push 10,3,11,5,2
+1st stk: 10,3,11,5,2
+2nd stk: 10,3,2 (when pop() executes, the 2nd stk still keep min on the top)
