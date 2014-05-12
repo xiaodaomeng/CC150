@@ -1,0 +1,6 @@
+two queues for dog and cat with timestamp
+enqueue: base on the type and add into the queue
+dequeueAny: if(q_cat.isempty()) dequeueDog();
+ 	    if(q_dog.isempty()) dequeueCat();
+            compare(q_dog.top().timestamp and q_cat.top().timestamp)
+dequeueDog(type): dequeue from q_dog;
