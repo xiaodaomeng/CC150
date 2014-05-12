@@ -1,0 +1,10 @@
+s1 is origin stack, s2 is target stack
+while(!s1.empty()){
+   int tmp=s1.pop();
+   while(!s2.empty()&&tmp<s2.top()){
+	s1.push(s2.pop());
+   }
+   s2.push(tmp);
+}
+time O(N^2)
+space O(N)
