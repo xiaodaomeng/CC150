@@ -1,0 +1,4 @@
+one stk1 as input, and one stk2 as output
+enqueue() always push into stk1
+dequeue() if(stk2.isempty()) copy stk1 to stk2,then pop stk2
+consider dequeue empty stack case, exception
