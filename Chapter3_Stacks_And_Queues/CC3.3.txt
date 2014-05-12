@@ -1,0 +1,8 @@
+method 1:
+stack array to record the stacks, when the stk.size()==capacity in push stage, create new stack and then push into stack array.
+push() and pop() are applied in the last array
+push() need to check the last stk.size()==capacity
+pop() need to delete the last stack when it is empty after pop()
+
+Follow up: popAt(int index)
+leftshift recursive call if pop from the middle stk, trivial
