@@ -1,0 +1,8 @@
+Tower of Hannoi: recursive
+stack(LIFO) to represent disks
+move(n, origin,destination,buffer){
+   if(n<=0) return;
+   move(n-1,tower1,tower2,tower3);//tower3 as buffer
+   movetop(tower1,tower3);
+   move(n-1,tower2,tower3,tower1);
+}
