@@ -1,0 +1,47 @@
+1. Binary Tree: a binary tree is made up of a finite set of elements called nodes. This set either is empty or cnsists of a node called the root together with tw binary trees, called the lef and right subtrees, which are disjoint from each other and from the root.
+   Binary Search Tree(BST):all nodes stored in the left subtree of a node whose key value is K have key values less than K. All nodes stored in the right subtree of a node whose key value is K have key values greater than or equal to K 
+
+2. depth: the depth of a node in the tree is the length of the path from the root of the tree to the node.(root is at level 0,its depth is 0)
+   height: the hright of a tree is one more than the depth of the deepest node in the tree.
+
+3. full binary tree: each node in a full binary tree is either (1) an internal node with exactly tewo non-empty children or (2) a leaf
+   complete binary tree: starting at the root and filling the tree by levels from left to right. In the complete binary tree of height d, all levels except possibly level d-1 are completely full. The bottom level has its nodes filled in from the left side.
+   full and complete tree must have exactly 2^n-1 nodes to meet the condition.
+
+4. balanced tree:defined as a binary tree in which the depth of the left and right subtrees of every node differ by 1 or less.
+
+5. Tree Traversal:
+   in_order: first visits the left child(including its entire subtree), then visits the node, and finally visits the right child(including its entire subtree)
+   pre-order: visit each node only before we visit its children
+   post-order: visit each node only after we visit its children(and their subtrees)
+
+6. Graph Traversal:(BFS and DFS)
+   Depth First Search(DFS):
+   void DFS(Node *root){
+	if(!root) return;
+        visit(root);
+	root.visited = true;
+        foreach(Node n in root.adjacent){
+	   if(n.visited == false)
+  	     DFS(n);
+	}
+   }
+   Breadth First Search(BFS):
+   void BFS(Node *root){
+	Queue q = new Queue;
+        root.visited = true;
+	visit(root);
+        q.push(root);
+
+        while(!q.empty()){
+	  Node r=q.pop();
+	  foreach(Node n in r.adjacent){
+	    if(n.visited == false){
+	       visit(n);
+	       n.visited = true;
+	       q.push(n);	
+	    }
+	  }
+	}
+   }
+   
