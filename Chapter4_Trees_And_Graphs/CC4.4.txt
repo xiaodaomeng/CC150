@@ -1,0 +1,17 @@
+method 1: BFS, time O(N),space O(1)
+iterate from root and then next level
+vector<list<TreeNode *>> build(TreeNode *root){
+  vector<list<TreeNode *>> res;
+  list<TreeNode *> level;
+  if(root) level.push(root);
+  while(!level.isempty()){
+	res.push(level);
+  	list<TreeNode *> parentlevel = level;
+	level.clear();
+	for(parentlevel){
+	   if(parentlevel->left) level.push(parentlevel->left);
+	   if(parentlevel->right) level.push(parentlevel->right);
+	}
+  }
+  return res;
+}
