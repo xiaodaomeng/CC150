@@ -1,4 +1,5 @@
 Leetcode Validate Binary Search Tree
+method 1: upper/lower bound
 time O(n),space O(logn)
 /**
  * Definition for binary tree
@@ -21,3 +22,5 @@ public:
         return BSTRe(root->left,lower,root->val)&&BSTRe(root->right,root->val,upper);
     }
 };
+
+method 2: in-order traversal and compare if the current value is larger than last_element 
