@@ -1,0 +1,15 @@
+binary represent a double number
+0.101 = 1*(1/2^1)+0*(1/2^2)+1*(1/2^3)=5/8
+decimal to binary: 
+integer: divide by 2 and get remainder
+float: multiply by 2 and compare with 1
+
+method 1: follow the math rule, string to represent result
+while(num>0)
+double r=num*2;
+if r>=1, string.push(1), then num = r-1;
+else string.push(0), num = r;
+
+method 2: compare 1, 1/2^1, 1/2^2,1/2^3...for each loop
+if num>series, push(1),num-series
+else push(0)
