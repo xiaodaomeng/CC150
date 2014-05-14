@@ -1,0 +1,2 @@
+if given node n has right subtree, the left mostchild of n->right is the next node
+if given node n doesn't have right subtree, go up until we find the current node is the left node of current node->parent
