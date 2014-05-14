@@ -1,0 +1,11 @@
+method 1: traversal two trees and look for substring, note the special sign to mark NULL to avoid the same strings with diff traversal methods
+time O(m+n), worst O(mn), space O(m+n)
+
+method 2: recursive call 
+time O(m+kn) , space O(logm+logn)
+match(r1,r2){
+  if(both are empty) return true;
+  if(one of them is empty) return false;
+  if(r1->val!=r2->val) return false;
+  return match(r1->right,r2->right)&&match(r1->left,r2->left);
+}
