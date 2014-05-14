@@ -1,0 +1,5 @@
+method 1:
+time O(n) on a balanced tree to check if the given nodes are in the same side
+look for the node which make two given nodes are not in the same side
+
+improve: recursive call for root->left and root->right to found ancestor
