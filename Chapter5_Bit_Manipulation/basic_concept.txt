@@ -1,0 +1,40 @@
+1. bitwise operator
+& bitwise AND (AND)
+| bitwise inclusive OR (OR)
+^ bitwise exclusive OR (XOR)
+~ not, bit inversion
+<< shift bits left, left shift by 1 = (*2)
+>> shift bits right, right shift by 1 = (/2)
+
+2.AND(&)
+	a	b	a&b
+	0	0	0
+	0	1	0
+	1	0	0
+	1	1	1
+
+3.OR(|)
+	a	b	a|b
+	0	0	0
+	0	1	1
+	1	0	1
+	1	1	1
+
+4.XOR(^)
+	a	b	a^b
+	0	0	0
+	0	1	1
+	1	0	1
+	1	1	0
+
+5. NOT(~)
+	a	~a
+	0	1
+	1	0
+
+6. Get bit num & (1<<i)
+   Set bit num | (1<<i)
+   Clear bit num & ~(1<<i)
+   Clear all bits from the most significant bit throught i (inclusive): num & (1<<i)-1
+   Clear all bits from i through 0 (inclusive):num & (~(1<<(i+1)-1))
+   Update bit: clear first and then set (num&~(1<<i))|(v<<i) v is 0 or 1 need to be updated
