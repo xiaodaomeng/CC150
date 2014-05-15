@@ -1,0 +1,15 @@
+int -- 32bits
+hexdecimal 4 bits
+
+int 32 bits 0000 0000 0000 0000 0000 0000 0000 0000
+            4bits hex
+
+odd bit shift right by 1
+	(x & 1010 1010 1010 1010 1010 1010 1010 1010 (binary))>>1
+ 	 (0x) a    a    a    a    a    a    a    a  
+even bit shift left by 1
+	(x & 0101 0101 0101 0101 0101 0101 0101 0101 (binary))<<1
+         (0x) 5    5    5    5    5    5    5    5
+odd | even 
+	    
+
