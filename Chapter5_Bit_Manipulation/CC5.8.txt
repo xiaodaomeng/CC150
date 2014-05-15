@@ -1,0 +1,1 @@
+caluculate how many bytes are filled and then fill, treat the start and end with less then 1 byte part individually, 0xFF shift by certain bits and | with screen[start/end]  
