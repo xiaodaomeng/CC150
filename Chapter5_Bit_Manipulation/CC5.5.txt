@@ -1,0 +1,4 @@
+method 1:
+A^B count how many 1s
+
+smart idea, because we only count 1, so we don't need to count 0, use c=c&(c-1) to clear least significant bits
