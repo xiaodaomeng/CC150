@@ -1,0 +1,26 @@
+res=3^a * 5^b * 7^c
+tricky
+3 queues to maintain the array of nubmers
+Q3,Q5,Q7;
+Q3.push(1);
+int val = 0;
+for(int i=0;i<=k;i++){
+    int v3=Q3.top();
+    int v5=Q5.top();
+    int v7=Q7.top();
+    val = min(v3,min(v5,v7));
+    if(val==v3){
+	Q3.pop();
+	Q3.push(3*val);
+	Q5.push(5*val);
+    }
+    else if(val==v5){
+	Q5.pop();
+	Q5.push(5*val);
+    }
+    else if(val==7){
+	Q7.pop();
+    }
+    Q7.push(7*val);//always add into Q7
+}
+return val;
