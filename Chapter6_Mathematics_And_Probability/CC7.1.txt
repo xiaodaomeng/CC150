@@ -1,0 +1,6 @@
+game 1: P=p
+game 2: P=C_3^3*(p)^3+C_3^2*(1-p)*p^2=3P^2-2P^3
+
+P<0.5 -->game1
+P=0.5 both are equal
+P>0.5 -->game2
