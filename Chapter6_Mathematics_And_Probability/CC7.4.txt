@@ -1,0 +1,21 @@
+1. subtraction
+   need to flip the sign of a
+   int negative(int a){
+       int neg=0;
+       int d=a<0?1:-1;
+       while(a!= 0){
+	  neg +=d;
+	  a += d;
+       }
+       return neg;
+   }
+   a+negative(b);
+
+2. multiply
+   use for loop to add together
+   if(b<0) loop include abs(b) time summation, and use negative flip result sign
+
+3. division
+   abs(a),abs(b)
+   counter to record how many time summation until the product is larger than a
+   check sign --> negative if a,b have diff signs  
