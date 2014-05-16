@@ -1,0 +1,10 @@
+1. every positive integer can be decomposed into a product of primes
+2. greatest common divisor of x and y:
+   gcd(x,y)=2^min(j0,k0)*3^min(j1,k1)*...
+3. least common multiple of x and y: 
+   lcm(x,y)=2^max(j0,k0)*3^max(j1,k1)*...
+   gcd*lcm=xy
+4. generate primes leetcode_extend
+5. Probability
+   P(A and B)=P(B given A)P(A)
+   P(A or B)=P(A)+P(B)-P(A and B)
