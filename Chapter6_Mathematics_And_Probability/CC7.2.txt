@@ -1,0 +1,6 @@
+no collision
+all clockwise or all counter clockwise (1/2)^3 *2
+collision P = 1-no collision = 3/4
+
+n-vertex
+1-(1/2)^n *2 = 1-(1/2)^(n-1)
