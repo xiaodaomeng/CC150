@@ -1,0 +1,4 @@
+check slope
+special case: vertical line
+
+note: check slope difference --> abs(s1-s2)<epsilon (based on the presicion)
