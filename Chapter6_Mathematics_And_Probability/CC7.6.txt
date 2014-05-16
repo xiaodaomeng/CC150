@@ -1,0 +1,48 @@
+leetcode Max Points on a line
+don't consider the precision problem here, can add the equal function to check tow x coordinates diff < epsilon
+/**
+ * Definition for a point.
+ * struct Point {
+ *     int x;
+ *     int y;
+ *     Point() : x(0), y(0) {}
+ *     Point(int a, int b) : x(a), y(b) {}
+ * };
+ */
+class Solution {
+public:
+    int max(int a,int b){
+        return a>b?a:b;
+    }
+    int maxPoints(vector<Point> &points) {
+        int num = points.size();
+        if(num==0) return 0;
+        if(num==1) return 1;
+        //unordered_map<double,int> slopecount;
+        map<double,int> slopecount;
+        int tmpmax=0;
+        for(int i=0;i<num-1;i++){
+            slopecount.clear();
+            int overlap=0;
+            int nonslope=0;
+            for(int j=i+1;j<num;j++){
+                if(points[i].x==points[j].x){
+                    if(points[i].y==points[j].y){
+                        overlap++;
+                    }else{
+                        nonslope++;
+                    }
+                }else{
+                    double slope=1.0*(points[i].y-points[j].y)/(points[i].x-points[j].x);
+                    slopecount[slope]++;
+                }
+            }
+            //cout<<overlap<<"\t"<<nonslope<<endl;
+            tmpmax=max(tmpmax,overlap+nonslope+1);
+            for(auto it=slopecount.begin();it!=slopecount.end();it++){
+                tmpmax=max(tmpmax,it->second+overlap+1);
+            }
+        }
+        return tmpmax;
+    }
+};
