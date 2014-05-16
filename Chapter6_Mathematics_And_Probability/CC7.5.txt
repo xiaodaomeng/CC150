@@ -1,0 +1,6 @@
+connect center of two squares
+special case:
+1. two squares overlap
+2. two center have the same x
+
+consider return the new two points on the edge of squares, connect them is cutting line
