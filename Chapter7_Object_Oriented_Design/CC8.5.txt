@@ -1,0 +1,45 @@
+class book{
+   string name;
+   string auther;
+   int year;
+   string publicISBN;
+   string catalog;
+   public:
+     get(),set() parms     
+};
+
+class user{
+     int userId;
+     int accounttype;
+   public:
+     getter and setter
+};
+
+class readersystem{
+   Library library;
+   user user_active;
+   display display_one;
+   book book_onel
+   public:
+     readersystem(){explict initialize}
+     getter/setter for library,user,book,display
+};
+class Library{
+     unordered_map<int,book> books;
+   public:
+     add()
+     remove(){check if it is in the hashmap}
+     find()
+};
+class display{
+   private:
+     book readingbook;
+     user readinguser;
+   public:
+     void displaybook(book book_one){
+	page
+     }
+     void pageforward()/backward(){}
+     void refresh(){ id, book,page,info;}
+};
+
