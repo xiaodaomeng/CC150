@@ -1,0 +1,33 @@
+class vehicle{
+   protect:
+     array<ParkingSpot> s_array;
+     string license;
+     string spotneeded;
+     int size;
+   public:
+     int getspotsneededs(){..}
+     int vehiclesize(){...}
+     void parkinspot(ParkingSpot s){ s_array.push_back(s);}
+     void remove(){...}
+     bool fit(){};
+};
+class bus:vehicle{
+   public:
+     bus(){
+        spotneeded=5;	
+     }
+     bool canfit(ParkingSpot s) {check array is continues 5 spots for bus;}
+};
+class car:vehicle{...};
+class motorcycle:vehicle{...};
+class parkinglot{
+    levels
+}; 
+class level{
+    spot, availablespotnumber
+};
+class ParkingSpot{
+    bool isavailable(){...}
+    park()
+    remove()
+};
