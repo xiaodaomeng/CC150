@@ -1,0 +1,17 @@
+class Edge{
+   enum Type{inner,outer,flat};
+   Type type;
+   int index;//index for 4 edges
+};
+class Piece{
+   Edge[4] edges;
+   bool isconner(){...}
+};
+class Puzzle{
+   Piece[] pieces;//left for not match
+   Piece[][] res;//match
+   Edge[] inner,outer,flat;
+   Piece[] corner;
+   void sort(){conner, inner,outer edge add to Edge[] inner,outer,flat}
+   void solve(){start from a corner,fitsWith edge,remove from the list}
+};
