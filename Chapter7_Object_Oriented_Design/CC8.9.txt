@@ -1,0 +1,27 @@
+class Operation{
+   protected:
+     Direcroty
+     createdtime
+     lastupdatedtime
+     lastaccesstime
+   public:
+     explicit intialize
+     delete
+     size
+     getpath
+     getter/setter
+};
+class file:Operation{
+   string content;
+   int size;
+   public:
+     get/setcontent
+     getsize
+};
+class Directory:Operation{
+   array<Operation> contents;
+   public:
+     int numberoffiles
+     delete/add
+     getcontent
+};
