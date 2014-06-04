@@ -1,0 +1,23 @@
+class Piece{
+   Color color {black,white from enum}
+   public:
+     getter/setter
+     void flip(Color c){
+        if white assign to black
+        if black assign to white
+     }
+};
+class Board{//record the score
+   array<Piece,Piece> board;
+   white/blackcounter;
+   public:
+     initialize 4 pieces in the center of board
+     placecolor in row/col
+     flip
+     calscore
+};
+class Game{
+   player
+   board
+   newGame setter/getter
+};
