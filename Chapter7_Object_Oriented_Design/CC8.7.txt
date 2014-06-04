@@ -1,0 +1,39 @@
+class message{
+   content
+   time
+   getter for content and time
+};
+class conversation{
+   protected:
+     array<user> participants;
+     int id;
+     array<message> messages;
+   public:
+     getter/setter for message and id;
+};
+class groupchat:conversation{
+   adduser
+   removeuser
+};
+class privatechat:conversation{
+   public:
+     initialize two user IDs for privatechat
+}; 
+
+class user{
+   id
+   online/offline ping user ip
+   unordered_map to map user id to receive/send add request and contact lists
+   getter/setter
+   receive/sent/remove add request
+   addconversation to group or private
+};
+class chatServer{
+   unordered_map to map user id, name, account and onlineusers
+   public:
+     create new instance
+     adduser
+     approveaddrequest
+     rejectaddrequest
+     usersignin/off
+};
